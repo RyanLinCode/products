@@ -6,6 +6,7 @@ while True:
 	if name == 'q':
 		break
 	price = input('請輸入商品價格：')
+	# price = int(price)
 	p = [name, price] #小清單
 	# p = []
 	# p.append(name)
@@ -20,3 +21,10 @@ print(products)
 for p in products:
 	print(p[0], '的價格是', p[1])
 	# 小清單的 0 是名字 1 是 價格
+# encoding='utf-8' 選擇編碼
+# encoding='big5'
+with open('products.csv', 'w', encoding='utf-8') as f:
+	f.write('商品,價格\n')
+	for p in products:
+		f.write(p[0] + ',' + p[1] + '\n')
+		# f.write(p[0] + ',' + str(p[1]) + '\n') #若p1被轉為整數 需要轉回字串才能合併
