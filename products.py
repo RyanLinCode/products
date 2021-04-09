@@ -15,3 +15,8 @@ print(products)
 
 # products[0][0] products[0][1] products[1][0] products[1][1]
 # 第一個0是大清單的0,第二個0是小清單的0
+
+
+for p in products:
+	print(p[0], '的價格是', p[1])
+	# 小清單的 0 是名字 1 是 價格
